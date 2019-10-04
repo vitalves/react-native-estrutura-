@@ -17,13 +17,41 @@ _Abrir o emulador_
 - Rodar o projeto no Android:
 
 ```js
-  react-native run-android 
+  react-native run-android
 ```
 - Iniciando a aplicação:
 ```js
   react-native start
 ```
----
+### Configurações de ambiente (ESLint, Prettier & EditorConfig):
 
+- Gerar o _.editorconfig_
 
+- Instalar o eslint _(Deletar o arquivo .eslintrc.js ante de prosseguir se ele já existir)_
 
+```js
+yarn add eslint -D
+```
+- Configurar o eslint
+```js
+yarn eslint --init
+```
+
+PASSOS:
+
+```js
+- To check syntax, find problems, and enforce code style
+- JavaScript modules (import/export)
+- React
+-  Use a popular style guide
+- Airbnb (https://github.com/airbnb/javascript)
+- JavaScript
+```
+_RECRIADO O ARQUIVO .eslintrc.js_
+_Excluir o arquivo 'package-lock' e dá um 'yarn' no terminal_
+
+- Instalar dependências adicionais:
+```js
+yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
+```
+_Adicionar configirações no arquivo .eslintrc.js_
