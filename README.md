@@ -23,6 +23,7 @@ _Abrir o emulador_
 ```js
   react-native start
 ```
+---
 
 
 
