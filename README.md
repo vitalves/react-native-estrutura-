@@ -55,3 +55,10 @@ _Excluir o arquivo 'package-lock' e dá um 'yarn' no terminal_
 yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
 ```
 _Adicionar configirações no arquivo .eslintrc.js_
+
+_Conferir configurações do arquivo '.prettierrc.js'_
+
+- Resetar a Aplicação
+```js
+  react-native start --reset-cache
+```
