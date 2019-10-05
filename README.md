@@ -132,3 +132,7 @@ _Importa-se do subdiretorio chamado 'native' ('styled-components/native)_
 ```js
 yarn add react-native-vector-icons
 ```
+- A aplicação precisa fazer instalações nativas, para isso:
+```js
+react-native link react-native-vector-icons
+```
