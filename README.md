@@ -120,3 +120,10 @@ protected ReactActivityDelegate createReactActivityDelegate() {
 yarn react-native run-android
 ```
 
+## Styled Components
+
+```js
+yarn add styled-components
+```
+_Importa-se do subdiretorio chamado 'native' ('styled-components/native)_
+
