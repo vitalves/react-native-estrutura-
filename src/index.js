@@ -1,29 +1,18 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
 
 import './config/ReactotronConfig';
-// ROUTAS
+// console.tron.log('hello worlds');
+// ROUTAS:
 import Routes from './routes';
 
 export default function App() {
-  return <Routes />;
+  return (
+    <>
+      {/* estiliza a barra de status */}
+      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      {/* chama as rotas */}
+      <Routes />
+    </>
+  );
 }
-
-/*
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-});
-
-// console.log('hello world');
-// console.tron.log('hello worlds');
-*/
