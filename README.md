@@ -87,5 +87,36 @@ Emulando pelo USB: inserir: _(no Reactotron.config( AQUI ))_
 // NO TERMINAL: $  adb reverse tpc:9090 tcp:9090
 ```
 
+## React Navigation
 
+```js
+  yarn add react-navigation yarn add react-navigation-stack react-native-gesture-handler react-native-reanimated
+```
+
+**NO ANDROID:**
+- Atualizar o arquivo _'MainActivity.java'_ com as configs abaixo:
+
+```js
+// NO INÍCIO DO ARQUIVO:
+import com.facebook.react.ReactActivityDelegate;
+import com.facebook.react.ReactRootView;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+
+// AO FINAL DO ARQUIVO (dentro da class: public class MainActivity extends ReactActivity):
+@Override
+protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+       return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }
+```
+
+- Rodar a aplicação novamente (instala as dependências nativas):
+
+```js
+yarn react-native run-android
+```
 
