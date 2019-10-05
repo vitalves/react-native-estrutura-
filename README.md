@@ -136,3 +136,9 @@ yarn add react-native-vector-icons
 ```js
 react-native link react-native-vector-icons
 ```
+
+-OBS:-
+_SEMPRE APÓS UM *link* É PRECISO RODAR NOVAMENTE A APLICAÇÃO:_
+```js
+react-native run-android
+```
