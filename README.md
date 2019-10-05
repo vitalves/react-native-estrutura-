@@ -127,3 +127,8 @@ yarn add styled-components
 ```
 _Importa-se do subdiretorio chamado 'native' ('styled-components/native)_
 
+## Ícones da aplicação:
+
+```js
+yarn add react-native-vector-icons
+```
