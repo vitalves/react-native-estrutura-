@@ -4,7 +4,7 @@
 
 **[ CONTEM ANOTAÇÕES, OBSERVAÇÕES E RASCUNHOS ELABORADOS DURANTE A AULA ]**
 
-_APLICAÇÃO:_
+## APLICAÇÃO:
 Consumir dados da API do GitHub: Usuários e repositórios favoritados.
 
 - inicia o projeto e cria o diretório:
@@ -19,6 +19,13 @@ _Abrir o emulador_
 ```js
   react-native run-android
 ```
+OU:
+- Rodar o projeto no IPhone:
+
+```js
+  react-native run-ios
+```
+
 - Iniciando a aplicação:
 ```js
   react-native start
@@ -62,3 +69,23 @@ _Conferir configurações do arquivo '.prettierrc.js'_
 ```js
   react-native start --reset-cache
 ```
+### Instalando o Reactotron para debugs
+
+```js
+yarn add reactotron-react-native
+```
+
+- Criar e configurar o arquivo _'ReactotronConfig.js'_ dentro de '/src/config/';
+- Adicionar a variável ```js __DEV__ ``` como 'readonly' no arquivo _'eslintrc.js'_;
+- importar _'./config/ReactotronConfig'_ no _index.js_ de 'src';
+__CONFIGS__
+Emulando pelo USB: inserir: _(no Reactotron.config( AQUI ))_
+```js
+{ host: '192.168.0.2 }
+// configuracoes da rede
+// No ANDROID é possível que precise de um redirecionamento de portas do ADB (ver na documentação)
+// NO TERMINAL: $  adb reverse tpc:9090 tcp:9090
+```
+
+
+
