@@ -142,3 +142,10 @@ _SEMPRE APÓS UM *link* É PRECISO RODAR NOVAMENTE A APLICAÇÃO:_
 ```js
 react-native run-android
 ```
+
+## Acessando API do Github
+
+- Instalando o Axios
+```js
+  yarn add axios
+```
