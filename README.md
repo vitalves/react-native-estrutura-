@@ -159,3 +159,10 @@ yarn add @react-native-community/async-storage
 ```js
 yarn react-native run-android
 ```
+
+## Realizando navegação
+
+- Fazendo a validação de prop-types
+```js
+yarn add prop-types
+```
