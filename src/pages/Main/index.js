@@ -27,7 +27,7 @@ export default class Main extends Component {
     title: 'Usuários', // titulo da página
   };
 
-  static PropTypes = {
+  static propTypes = {
     navigation: PropTypes.shape({
       navigate: PropTypes.func,
     }).isRequired,
