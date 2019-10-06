@@ -129,6 +129,7 @@ export default class Main extends Component {
     );
   }
 }
+
 /*
 Main.navigationOptions = {
   title: 'Usuários', // titulo da página
