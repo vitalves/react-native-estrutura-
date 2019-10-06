@@ -149,3 +149,13 @@ react-native run-android
 ```js
   yarn add axios
 ```
+## Trabalhando com Storage
+
+- Instala:
+```js
+yarn add @react-native-community/async-storage
+```
+- RUN novamente:
+```js
+yarn react-native run-android
+```
