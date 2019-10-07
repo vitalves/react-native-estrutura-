@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ActivityIndicator } from 'react-native';
 import api from '../../services/api';
 
 import {
   Container,
   Header,
+  Loading,
   Avatar,
   Name,
   Bio,
@@ -35,25 +35,39 @@ export default class User extends Component {
   state = {
     stars: [],
     page: 1,
-    loading: false,
+    loading: true,
   };
 
   async componentDidMount() {
-    this.setState({ loading: true });
+    this.load();
+  }
 
+  load = async (page = 1) => {
+    const { stars } = this.state;
     const { navigation } = this.props;
     const user = navigation.getParam('user');
     // console.log(user);
 
-    const response = await api.get(`/users/${user.login}/starred`);
+    const response = await api.get(`/users/${user.login}/starred`, {
+      params: { page },
+    });
     // console.log(response);
 
     this.setState({
-      stars: response.data,
+      stars: page > 1 ? [...stars, ...response.data] : response.data,
+      page,
       loading: false,
     });
     // console.log(this.state.stars);
-  }
+  };
+
+  loadMore = () => {
+    const { page } = this.state;
+
+    const nextPage = page + 1;
+
+    this.load(nextPage);
+  };
 
   render() {
     const { navigation } = this.props;
@@ -69,13 +83,13 @@ export default class User extends Component {
           <Bio> {user.bio} </Bio>
         </Header>
         {loading ? (
-          <ActivityIndicator />
+          <Loading />
         ) : (
           <Stars
             data={stars}
-            keyExtractor={star => String(star.id)}
             onEndReachedThreshold={0.2} // Carrega mais itens quando chegar em 20% do fim
             onEndReached={this.loadMore} // Função que carrega mais itens
+            keyExtractor={star => String(star.id)}
             renderItem={({ item }) => (
               <Starred>
                 <OwnerAvatar source={{ uri: item.owner.avatar_url }} />
