@@ -84,10 +84,8 @@ export default class User extends Component {
 
   handleNavigate = repository => {
     const { navigation } = this.props;
-
+    // nome da tela seguinte e dados (objeto)
     navigation.navigate('Repository', { repository });
-
-    console.log(repository);
   };
 
   render() {

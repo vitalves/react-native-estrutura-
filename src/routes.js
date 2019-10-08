@@ -3,6 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Main from './pages/Main';
 import User from './pages/User';
+import Repository from './pages/Repository';
 
 // createAppContainer precisa vir por volta de todas as rotas
 const Routes = createAppContainer(
@@ -11,6 +12,7 @@ const Routes = createAppContainer(
     {
       Main,
       User,
+      Repository,
     },
     {
       headerLayoutPreset: 'center', // centraliza o conteudo do header

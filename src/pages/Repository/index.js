@@ -1,11 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Browser } from './styles';
 
-console.log('Repository');
+export default function Repository({ navigation }) {
+  const repository = navigation.getParam('repository');
 
-export default function Repository() {
-  return (
-    <Browser source={{ uri: 'https://google.com' }} style={{ marginTop: 20 }} />
-  );
+  return <Browser source={{ uri: 'https://geralinks.com.br' }} />;
 }
+
+Repository.propTypes = {
+  navigation: PropTypes.shape({
+    getParam: PropTypes.func,
+  }).isRequired,
+};
+
+Repository.navigationOptions = ({ navigation }) => ({
+  title: navigation.getParam('repository').name,
+});
