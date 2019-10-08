@@ -6,7 +6,7 @@ import { Browser } from './styles';
 export default function Repository({ navigation }) {
   const repository = navigation.getParam('repository');
 
-  return <Browser source={{ uri: 'https://geralinks.com.br' }} />;
+  return <Browser source={{ uri: repository.html_url }} />;
 }
 
 Repository.propTypes = {
