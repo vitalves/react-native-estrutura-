@@ -90,7 +90,7 @@ Emulando pelo USB: inserir: _(no Reactotron.config( AQUI ))_
 ## React Navigation
 
 ```js
-  yarn add react-navigation yarn add react-navigation-stack react-native-gesture-handler react-native-reanimated
+  yarn add react-navigation react-navigation-stack react-native-gesture-handler react-native-reanimated
 ```
 
 **NO ANDROID:**
