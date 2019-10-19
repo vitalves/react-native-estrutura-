@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 
 import './config/ReactotronConfig';
 // console.tron.log('hello worlds');
-// ROUTAS:
+// ROTAS:
 import Routes from './routes';
 
 export default function App() {
